@@ -33,6 +33,16 @@ const Footer2 = () => {
         <div className="mt-8 text-center text-gray-300 border-t border-gray-500 pt-4">
           &copy; {new Date().getFullYear()} BrandName. All rights reserved.
         </div>
+        {/* GitHub Code Link Section */}
+      <div className="text-center mt-6">
+        <a
+          href="https://github.com/coder-prashant-raut/TWIND-UI/blob/main/src/components/navbars/NavBar4.jsx"
+          target="_blank"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md inline-block mt-2"
+        >
+          GitHub Code
+         </a>
+      </div>
       </footer>
     );
   };
