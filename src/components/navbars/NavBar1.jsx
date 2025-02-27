@@ -65,7 +65,7 @@ export default function Navbar1() {
       {/* GitHub Code Link Section */}
       <div className="text-center mt-6">
         <a
-          href="https://github.com/your-repo"
+          href="https://github.com/coder-prashant-raut/TWIND-UI/blob/main/src/components/navbars/NavBar1.jsx"
           target="_blank"
           className="bg-blue-500 text-white px-4 py-2 rounded-md inline-block mt-2"
         >
