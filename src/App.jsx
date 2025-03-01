@@ -3,6 +3,7 @@ import NavBars from "./components/navbars/NavBars";
 import Footers from "./components/footers/Footers";
 import Cards from "./components/cards/Cards";
 import Heros from "./components/heros/heros";
+import Buttons from "./components/buttons/Buttons";
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
       {/* <NavBars /> */}
       {/* <Footers/>
       <Cards/> */}
-      <Heros/>
+      {/* <Heros/> */}
+     {/* <Buttons/> */}
+     <Cards/>
+     
     </>
   );
 }
