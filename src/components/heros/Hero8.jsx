@@ -16,12 +16,12 @@ const Hero8 = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen flex flex-col items-center justify-center bg-gray-900 text-white overflow-hidden">
+    <section className="relative w-full h-screen flex flex-col items-center justify-center bg-gray-900 text-white overflow-hidden p-6">
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-tr from-blue-900 via-purple-800 to-indigo-700 opacity-90 animate-gradientMove"></div>
       
       {/* Dynamic Heading */}
-      <h1 className="relative z-10 text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-6 transition-all duration-1000 ease-in-out">
+      <h1 className="relative z-10 text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-10 pb-5 transition-all duration-1000 ease-in-out">
         {headings[currentHeading]}
       </h1>
       

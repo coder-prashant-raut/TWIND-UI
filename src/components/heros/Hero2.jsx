@@ -22,6 +22,7 @@ const Hero2 = () => {
             <img src="https://source.unsplash.com/600x400/?technology,code" alt="Hero Image" className="rounded-lg shadow-lg" />
           </div>
         </div>
+        
       </section>
     );
   };
