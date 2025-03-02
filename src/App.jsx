@@ -15,7 +15,7 @@ const App = () => {
           <div className="container mx-auto flex justify-between items-center px-6">
             <h1 className="text-2xl font-bold">My Website</h1>
             <ul className="flex space-x-6">
-              {["Home", "Navbars", "Services", "Portfolio", "Contact"].map((page) => (
+              {["Home", "Navbars", "Footers", "Cards", "Buttons", "Heros"].map((page) => (
                 <li key={page}>
                   <NavLink 
                     to={page === "Home" ? "/" : `/${page.toLowerCase()}`} 
