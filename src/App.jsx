@@ -17,7 +17,7 @@ const App = () => {
       <div>
         <nav className="bg-gray-900 text-white py-4 shadow-md">
           <div className="container mx-auto flex justify-between items-center px-6">
-            <h1 className="text-2xl font-bold">My Website</h1>
+            <h1 className="text-2xl font-bold">TWIND-UI</h1>
             <ul className="flex space-x-6">
               {["Home", "Navbars", "Footers", "Cards", "Buttons", "Heros"].map(
                 (page) => (
@@ -41,7 +41,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/navbar" element={<NavBars />} />
+          <Route path="/navbars" element={<NavBars />} />
           <Route path="/footers" element={<Footers />} />
           <Route path="/cards" element={<Cards />} />
           <Route path="/buttons" element={<Buttons />} />
@@ -53,7 +53,7 @@ const App = () => {
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
           {/* Brand Name */}
           <div className="text-2xl font-extrabold tracking-wide font-mono">
-            BrandName
+            TWIND-UI
           </div>
 
           {/* Navigation Links */}

@@ -20,10 +20,10 @@ function NavBars() {
         <div className="bg-white shadow-lg rounded-xl p-4 sm:p-8">
           <h2 className="text-xl font-semibold text-gray-800">How to Use These Navbars?</h2>
           <p className="text-gray-600 mt-2 text-sm sm:text-base">
-            1️⃣ Each navbar component contains a **GitHub link** where you can find its source code.  
-            2️⃣ Click on the GitHub link inside each navbar to access the code and copy it.  
-            3️⃣ Import the navbar component into your React project and use it as needed.  
-            4️⃣ Customize the navbars by modifying styles, links, or branding according to your requirements.  
+            1️⃣ Each navbar component contains a **GitHub link** where you can find its source code.  <br />
+            2️⃣ Click on the GitHub link inside each navbar to access the code and copy it.  <br />
+            3️⃣ Import the navbar component into your React project and use it as needed.  <br />
+            4️⃣ Customize the navbars by modifying styles, links, or branding according to your requirements.  <br />
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mt-4">Required Dependencies</h2>
