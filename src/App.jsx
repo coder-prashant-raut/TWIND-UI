@@ -1,36 +1,62 @@
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  NavLink,
 } from "react-router-dom";
+
 import NavBars from "./components/navbars/NavBars";
 import Footers from "./components/footers/Footers";
 import Cards from "./components/cards/Cards";
 import Buttons from "./components/buttons/Buttons";
 import Home from "./components/Home";
 import Heros from "./components/heros/Heros";
-import Navbar from "./components/twindinner/Navbar"
+import Navbar from "./components/twindinner/Navbar";
 import Footer from "./components/twindinner/Footer";
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  // Load theme from localStorage or system preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
+  }, []);
+
+  // Apply theme to html root
+  useEffect(() => {
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
     <Router>
-      <div className="bg-amber-50`">
-       <Navbar/>
+      <div className={`min-h-screen ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}>
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-     <div className="pt-9">
-     <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/navbars" element={<NavBars />} />
-          <Route path="/footers" element={<Footers />} />
-          <Route path="/cards" element={<Cards />} />
-          <Route path="/buttons" element={<Buttons />} />
-          <Route path="/heros" element={<Heros />} />
-        </Routes>
-     </div>
+        <div className="pt-20">
+          <Routes>
+            <Route path="/" element={<Home theme={theme} />} />
+            <Route path="/navbars" element={<NavBars />} />
+            <Route path="/footers" element={<Footers />} />
+            <Route path="/cards" element={<Cards />} />
+            <Route path="/buttons" element={<Buttons />} />
+            <Route path="/heros" element={<Heros />} />
+          </Routes>
+        </div>
 
-<Footer/>
+        <Footer theme={theme} />
+
       </div>
     </Router>
   );
