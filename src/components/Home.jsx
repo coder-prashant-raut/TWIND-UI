@@ -1,4 +1,5 @@
 import React from "react";
+import RocketLogo  from '../assets/rocket.png'
 import {
   FaBook,
   FaRocket,
@@ -55,7 +56,7 @@ const Home = ({ theme }) => {
 
   return (
     <section
-      className={`min-h-screen mt-0 px-6 py-24 flex flex-col items-center justify-center text-center transition-all duration-500 relative overflow-hidden ${
+      className={`min-h-screen mt-0 px-6 pt-20 py-24 flex flex-col items-center justify-center text-center transition-all duration-500 relative overflow-hidden ${
         isDark
           ? "bg-gradient-to-br from-black via-gray-900 to-black text-white"
           : "bg-gradient-to-br from-white via-slate-100 to-white text-gray-900"
@@ -83,12 +84,19 @@ const Home = ({ theme }) => {
         transition={{ duration: 0.8 }}
       >
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2 justify-center items-center">
           
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
-          Elevate Your UI Game 🚀
+        <h1 className="exo text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600"  style={{ fontFamily: "'Space Grotesk', sans-serif" }} >
+          Elevate Your UI Game <img src={RocketLogo} alt=""  className="max-h-[500px]"/>
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">
+
+
+        <p  style={{ fontFamily: "'Poppins', sans-serif" }} className={`p-6 text-2xl  ${
+  isDark
+    ? " text-white"
+    : " text-gray-900"
+}`}
+>
           TWIND-UI is your gateway to stunning, efficient, and production-ready
           components. Build elegant interfaces faster than ever.
         </p>
@@ -100,6 +108,8 @@ const Home = ({ theme }) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="flex items-center justify-center gap-3 px-17 py-3 text-lg font-bold border-2 border-amber-300  text-white dark:text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 rounded-full shadow-lg shadow-amber-200 hover:shadow-2xl transition-all duration-300"
+
+      style={{ fontFamily: "'Inter', sans-serif" }}
     >
       <FaBook className="text-2xl" /> Explore Docs
     </motion.button>
@@ -123,6 +133,7 @@ const Home = ({ theme }) => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
+           
             className={`p-6 rounded-3xl border backdrop-blur-lg bg-opacity-60 shadow-xl transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${
               isDark
                 ? "bg-gray-900/60 border-gray-700"
@@ -134,8 +145,8 @@ const Home = ({ theme }) => {
             viewport={{ once: true }}
           >
             <div className="mb-4 flex justify-center">{feature.icon}</div>
-            <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <h3 className="text-xl font-bold mb-2"  style={{ fontFamily: "'Poppins', sans-serif" }}>{feature.title}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400" style={{ fontFamily: "'Poppins', sans-serif" }}>
               {feature.desc}
             </p>
           </motion.div>

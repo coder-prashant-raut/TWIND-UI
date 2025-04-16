@@ -44,7 +44,7 @@ const App = () => {
       <div className={`min-h-screen ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-        <div className="pt-20">
+        <div className="">
           <Routes>
             <Route path="/" element={<Home theme={theme} />} />
             <Route path="/navbars" element={<NavBars />} />

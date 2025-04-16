@@ -24,21 +24,31 @@ function Navbar({ theme, toggleTheme }) {
   ];
 
   return (
-    <nav
-    className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out backdrop-blur-md ${
+    <nav    style={{ fontFamily: "'Inter', sans-serif" }}
+    className={`fixed  top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out backdrop-blur-md ${
       scrolled
         ? theme === "dark"
           ? "bg-black/80 text-white shadow-md border-b border-white/10 mt-4 mx-4 md:mx-40 rounded-xl"
           : "bg-white/80 text-black shadow-md border-b border-gray-200 mt-4 mx-4 md:mx-40 rounded-xl"
         : theme === "dark"
-        ? "bg-transparent text-white border-transparent"
-        : "bg-transparent text-black border-transparent"
+        ? " text-white border-transparent"
+        : " text-black border-transparent"
     }`}
     
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
-        <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider">LOGO</h1>
+        <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider">
+  <span className={` ${
+  theme ==='dark'
+    ? " text-white"
+    : " text-gray-900"
+}`}>Brahma</span>
+  <span className="ml-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-md dark:text-transparent">
+    UI
+  </span>
+</h1>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
@@ -48,7 +58,7 @@ function Navbar({ theme, toggleTheme }) {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white">
+            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white"  >
               Components <FaChevronDown />
             </button>
             <div
