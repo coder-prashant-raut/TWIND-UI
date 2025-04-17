@@ -21,8 +21,11 @@ function Navbar({ theme, toggleTheme }) {
     { name: "Footers", route: "/footers" },
     { name: "Heros", route: "/heros" },
     { name: "Forms", route: "/forms" },
+    { name: "Testimonials", route: "/testimonials" },
   ];
 
+
+  
   return (
     <nav    style={{ fontFamily: "'Inter', sans-serif" }}
     className={`fixed  top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out backdrop-blur-md ${

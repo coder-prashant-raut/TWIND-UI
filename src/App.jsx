@@ -9,10 +9,11 @@ import NavBars from "./components/navbars/NavBars";
 import Footers from "./components/footers/Footers";
 import Cards from "./components/cards/Cards";
 import Buttons from "./components/buttons/Buttons";
-import Home from "./components/Home";
+import Home from "./components/twindinner/Home";
 import Heros from "./components/heros/Heros";
 import Navbar from "./components/twindinner/Navbar";
 import Footer from "./components/twindinner/Footer";
+import Testimonials from "./components/testimonials/Testimonials";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -52,6 +53,7 @@ const App = () => {
             <Route path="/cards" element={<Cards theme={theme} />} />
             <Route path="/buttons" element={<Buttons theme={theme}/>} />
             <Route path="/heros" element={<Heros theme={theme} />} />
+            <Route path="/testimonials" element={<Testimonials theme={theme} />} />
           </Routes>
         </div>
 

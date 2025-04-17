@@ -1,5 +1,5 @@
 import React from "react";
-import RocketLogo  from '../assets/rocket.png'
+import RocketLogo  from '../../assets/rocket.png'
 import {
   FaBook,
   FaRocket,
