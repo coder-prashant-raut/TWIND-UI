@@ -8,7 +8,7 @@ function Testimonial2() {
         <div className="flex items-center space-x-6">
           {/* Testimonial Image */}
           <img
-            src="https://via.placeholder.com/80"
+           src="https://randomuser.me/api/portraits/men/32.jpg"
             alt="User"
             className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
           />
@@ -29,8 +29,8 @@ function Testimonial2() {
 
       {/* Decorative Quote Icon */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40">
-        <svg
-          className="text-white w-16 h-16"
+      <svg
+          className="text-gray-300 w-12 h-12"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
