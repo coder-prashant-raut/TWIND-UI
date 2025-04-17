@@ -22,9 +22,10 @@ function Navbar({ theme, toggleTheme }) {
     { name: "Heros", route: "/heros" },
     { name: "Forms", route: "/forms" },
     { name: "Testimonials", route: "/testimonials" },
+    { name: "Loader", route: "/loaders" },
   ];
 
-
+  
   
   return (
     <nav    style={{ fontFamily: "'Inter', sans-serif" }}

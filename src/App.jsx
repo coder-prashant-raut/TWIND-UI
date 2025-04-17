@@ -14,6 +14,7 @@ import Heros from "./components/heros/Heros";
 import Navbar from "./components/twindinner/Navbar";
 import Footer from "./components/twindinner/Footer";
 import Testimonials from "./components/testimonials/Testimonials";
+import Loaders from "./components/loaders/Loaders";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -54,6 +55,7 @@ const App = () => {
             <Route path="/buttons" element={<Buttons theme={theme}/>} />
             <Route path="/heros" element={<Heros theme={theme} />} />
             <Route path="/testimonials" element={<Testimonials theme={theme} />} />
+            <Route path="/loaders" element={<Loaders theme={theme} />} />
           </Routes>
         </div>
 
