@@ -38,7 +38,7 @@ function Navbar({ theme, toggleTheme }) {
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
-        <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider">
+        <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider ">
   <span className={` ${
   theme ==='dark'
     ? " text-white"
@@ -58,13 +58,13 @@ function Navbar({ theme, toggleTheme }) {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white"  >
+            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white font-mono"  >
               Components <FaChevronDown />
             </button>
             <div
               className={`${
                 isDropdownOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
-              } absolute left-0 w-48 bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg rounded-md mt-2 transition-all duration-300 overflow-hidden`}
+              } absolute left-0 w-48 bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg rounded-md mt-2 transition-all duration-300 overflow-hidden font-mono`}
             >
               <ul>
                 {navLinks.map(({ name, route }) => (
@@ -87,13 +87,13 @@ function Navbar({ theme, toggleTheme }) {
             onMouseEnter={() => setIsTemplatesDropdownOpen(true)}
             onMouseLeave={() => setIsTemplatesDropdownOpen(false)}
           >
-            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white">
+            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white font-mono">
               Templates <FaChevronDown />
             </button>
             <div
               className={`${
                 isTemplatesDropdownOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
-              } absolute left-0 w-48 bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg rounded-md mt-2 transition-all duration-300 overflow-hidden`}
+              } absolute left-0 w-48 bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg rounded-md mt-2 transition-all duration-300 overflow-hidden font-mono`}
             >
               <ul>
                 {["Template 1", "Template 2", "Template 3"].map((name, idx) => (

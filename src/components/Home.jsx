@@ -86,12 +86,12 @@ const Home = ({ theme }) => {
 
         <div className="flex flex-col gap-2 justify-center items-center">
           
-        <h1 className="exo text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600"  style={{ fontFamily: "'Space Grotesk', sans-serif" }} >
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-mono"  >
           Elevate Your UI Game <img src={RocketLogo} alt=""  className="max-h-[500px]"/>
         </h1>
 
 
-        <p  style={{ fontFamily: "'Poppins', sans-serif" }} className={`p-6 text-2xl  ${
+        <p   className={`p-6 text-2xl font-mono ${
   isDark
     ? " text-white"
     : " text-gray-900"
@@ -107,9 +107,9 @@ const Home = ({ theme }) => {
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="flex items-center justify-center gap-3 px-17 py-3 text-lg font-bold border-2 border-amber-300  text-white dark:text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 rounded-full shadow-lg shadow-amber-200 hover:shadow-2xl transition-all duration-300"
+      className="flex items-center justify-center gap-3 px-17 py-3 text-lg font-bold border-2 border-amber-300  text-white dark:text-white bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 rounded-full shadow-lg shadow-amber-200 hover:shadow-2xl transition-all duration-300 font-mono"
 
-      style={{ fontFamily: "'Inter', sans-serif" }}
+    
     >
       <FaBook className="text-2xl" /> Explore Docs
     </motion.button>
@@ -145,7 +145,7 @@ const Home = ({ theme }) => {
             viewport={{ once: true }}
           >
             <div className="mb-4 flex justify-center">{feature.icon}</div>
-            <h3 className="text-xl font-bold mb-2"  style={{ fontFamily: "'Poppins', sans-serif" }}>{feature.title}</h3>
+            <h3 className="text-xl font-bold mb-2 font-mono">{feature.title}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400" style={{ fontFamily: "'Poppins', sans-serif" }}>
               {feature.desc}
             </p>
