@@ -14,7 +14,7 @@ function Loaders({ theme }) {
       {/* Header */}
       <div className="max-w-6xl w-full mx-auto space-y-10">
         <div className="text-center px-4">
-          <h1 className="text-3xl sm:text-4xl font-bold">Modern Loaders Collection</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold font-mono">Modern Loaders Collection</h1>
           <p className="mt-2 sm:text-lg text-gray-600 dark:text-gray-300">
             A set of beautiful, smooth, and modern CSS loaders made with Tailwind and pure CSS.
           </p>

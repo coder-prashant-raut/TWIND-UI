@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaMoon, FaSun, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
@@ -42,17 +43,17 @@ function Navbar({ theme, toggleTheme }) {
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
-        <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider ">
-  <span className={` ${
-  theme ==='dark'
-    ? " text-white"
-    : " text-gray-900"
-}`}>Brahma</span>
-  <span className="ml-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-md dark:text-transparent">
-    UI
-  </span>
-</h1>
-
+       
+<Link to="/">
+  <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider cursor-pointer">
+    <span className={` ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+      Brahma
+    </span>
+    <span className="ml-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-md dark:text-transparent">
+      UI
+    </span>
+  </h1>
+</Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">

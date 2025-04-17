@@ -11,13 +11,13 @@ import Hero8 from './Hero8';
 function Heros({ theme }) {
   return (
     <div
-      className={`${
-        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+      className={ `pt-20 ${
+        theme === "dark" ? "bg-transparant text-white" : "bg-white text-gray-900"
       } max-w-6xl mx-auto space-y-10 py-10`}
     >
       {/* Header Section */}
       <div className="text-center">
-        <h1 className="text-2xl sm:text-3xl font-bold">
+        <h1 className="text-2xl sm:text-3xl font-bold font-mono">
           Modern Hero Sections Library
         </h1>
         <p className="sm:text-lg px-4 mt-2">

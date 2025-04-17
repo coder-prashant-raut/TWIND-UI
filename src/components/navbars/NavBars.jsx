@@ -25,7 +25,7 @@ function NavBars({ theme }) {
       <div className="max-w-6xl w-full space-y-12">
         {/* Page Heading */}
         <div className="text-center space-y-3">
-          <h1 className="text-4xl font-bold drop-shadow-md">
+          <h1 className="text-4xl font-bold drop-shadow-md font-mono">
             🚀 Modern Navbar Components
           </h1>
           <p className="text-lg max-w-2xl mx-auto">

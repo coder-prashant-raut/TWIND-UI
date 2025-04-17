@@ -8,7 +8,7 @@ import Footer5 from './Footer5';
 function Footers({ theme }) {
   return (
     <div
-      className={`max-w-6xl mx-auto space-y-10 py-10 transition-all duration-500 relative overflow-hidden ${
+      className={`max-w-6xl mx-auto space-y-10 py-10 pt-20 transition-all duration-500 relative overflow-hidden ${
         theme === "dark"
           ? "bg-gradient-to-br from-black via-gray-900 to-black text-white"
           : "bg-gradient-to-br from-white via-slate-100 to-white text-gray-900"
@@ -16,7 +16,7 @@ function Footers({ theme }) {
     >
       {/* Header Section */}
       <div className="text-center">
-        <h1 className="text-2xl sm:text-3xl font-bold">
+        <h1 className="text-2xl sm:text-3xl font-bold font-mono">
           Modern Footer Components Library
         </h1>
         <p className="text-gray-600 sm:text-lg px-4 mt-2">
