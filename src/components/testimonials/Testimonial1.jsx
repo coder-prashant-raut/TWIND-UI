@@ -7,7 +7,7 @@ function Testimonial1() {
         <div className="flex items-center space-x-4">
           {/* Testimonial Image */}
           <img
-            src="https://via.placeholder.com/60"
+         src="https://randomuser.me/api/portraits/men/32.jpg"
             alt="User"
             className="w-16 h-16 rounded-full object-cover"
           />
