@@ -2,38 +2,54 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  NavLink,
+  useLocation,
 } from "react-router-dom";
-import NavBars from "./components/navbars/NavBars";
-import Footers from "./components/footers/Footers";
-import Cards from "./components/cards/Cards";
-import Buttons from "./components/buttons/Buttons";
+import NavBars from "./components/Components/navbars/NavBars";
+import Footers from "./components/Components/footers/Footers";
+import Cards from "./components/Components/cards/Cards";
+import Buttons from "./components/Components/buttons/Buttons";
 import Home from "./components/Home";
-import Heros from "./components/heros/Heros";
-import Navbar from "./components/twindinner/Navbar"
+import Heros from "./components/Components/heros/Heros";
+import Navbar from "./components/twindinner/Navbar";
 import Footer from "./components/twindinner/Footer";
+import SideNav from "./components/SideNav/SideNav";
+import ThemeToggle from "./components/Common/themeToggle";
+// import ThemeToggle from "./components/ThemeToggle";
+import { useEffect, useState } from "react";
 
-const App = () => {
+const AppContent = () => {
+  const location = useLocation();
+  const showSideNav = location.pathname !== "/";
+
   return (
-    <Router>
-      <div className="bg-amber-50`">
-       <Navbar/>
+    <div className="bg-amber-50 dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-100">
+      <Navbar />
+      <div className="flex pt-16">
+        {/* Show SideNav only if not on Home */}
+        {showSideNav && <SideNav />}
 
-     <div className="pt-9">
-     <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/navbars" element={<NavBars />} />
-          <Route path="/footers" element={<Footers />} />
-          <Route path="/cards" element={<Cards />} />
-          <Route path="/buttons" element={<Buttons />} />
-          <Route path="/heros" element={<Heros />} />
-        </Routes>
-     </div>
-
-<Footer/>
+        {/* Main content */}
+        <div className="flex-1 px-4 py-6">
+          {/* <ThemeToggle /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/components/navbar" element={<NavBars />} />
+            <Route path="/components/footer" element={<Footers />} />
+            <Route path="/components/card" element={<Cards />} />
+            <Route path="/components/button" element={<Buttons />} />
+            <Route path="/components/hero" element={<Heros />} />
+          </Routes>
+        </div>
       </div>
-    </Router>
+      <Footer />
+    </div>
   );
 };
+
+const App = () => (
+  <Router>
+    <AppContent />
+  </Router>
+);
 
 export default App;

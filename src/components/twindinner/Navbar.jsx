@@ -28,11 +28,11 @@ function Navbar() {
 <div className="container  rounded-xl p-3  mx-auto flex justify-between items-center px-6">
   <h1 className="text-2xl font-bold">TWIND-UI</h1>
   <ul className="flex space-x-6">
-    {["Home", "Navbars", "Footers", "Cards", "Buttons", "Heros"].map(
+    {["Home", "Navbar", "Footer", "Card", "Button", "Hero"].map(
       (page) => (
         <li key={page}>
           <NavLink
-            to={page === "Home" ? "/" : `/${page.toLowerCase()}`}
+            to={page === "Home" ? "/" : `/components/${page.toLowerCase()}`}
             className={({ isActive }) =>
               `px-2 py-1 text-xl  rounded-lg transition ${
                 isActive ? "bg-blue-500" : "hover:bg-blue-400"
