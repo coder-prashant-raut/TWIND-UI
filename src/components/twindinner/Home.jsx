@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import TestimonialCarousel from "./TestimonialCarousel";
 import UILibraryBenefits from "./UILibraryBenefits";
+import GalaxyOrbit from "./GalaxyOrbit";
 
 
 const Home = ({ theme }) => {
@@ -161,6 +162,10 @@ const Home = ({ theme }) => {
 
 
   <UILibraryBenefits theme={theme} />
+  
+
+ 
+  <GalaxyOrbit theme={theme} />
 
     </section>
   );

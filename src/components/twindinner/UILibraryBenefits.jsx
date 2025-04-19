@@ -43,14 +43,13 @@ export default function UILibraryBenefits({ theme }) {
 
   return (
     <div
-      className={`w-full mt-10 py-20 px-6 md:px-28 flex flex-col lg:flex-row items-center justify-center 
-        gap-10 lg:gap-20 shadow-2xl rounded-3xl transition-all duration-300
-        `}
+      className={`w-full mt-10 py-20 px-6 md:px-28 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20`}
     >
       {/* Left: Image + Glow */}
       <div className="relative w-full max-w-md lg:max-w-lg flex justify-center items-center">
+        {/* Glow Effect */}
         <motion.div
-          className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-pink-500/20 blur-[100px] rounded-full -z-10"
+          className="absolute w-[600px] h-[600px] bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500/40 blur-[120px] rounded-full -z-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -73,7 +72,7 @@ export default function UILibraryBenefits({ theme }) {
           Why Choose Our <span className="text-pink-500">UI Library</span> ?
         </motion.h1>
 
-        <div className="h-[200px] mt-20 md:h-[220px] p-2 relative overflow-hidden w-full">
+        <div className="h-[200px] mt-20 md:h-[220px] p-2 relative overflow-hidden w-full flex flex-col justify-center items-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}

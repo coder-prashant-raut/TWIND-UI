@@ -58,27 +58,21 @@ export default function SmoothTestimonials({ theme }) {
 
   return (
     <div
-      className={`relative mt-20 w-full overflow-hidden py-12 transition-all duration-500
-        backdrop-blur-lg rounded-xl  
-        `}
+      className={`relative mt-20 w-full overflow-hidden py-12 transition-all duration-500 backdrop-blur-lg rounded-xl`}
     >
-     {/* Left Gradient Overlay */}
-<div
-  className={`absolute left-0 top-0 h-full 
-    w-[80px] sm:w-[120px] md:w-[180px] lg:w-[350px] 
-    z-10 pointer-events-none 
-    bg-gradient-to-r ${isDark ? "from-gray-900/90" : "from-white/80"} to-transparent`}
-/>
-<div
-  className={`absolute right-0 top-0 h-full 
-    w-[100px] sm:w-[140px] md:w-[200px] lg:w-[350px] 
-    z-10 pointer-events-none 
-    bg-gradient-to-l ${
-      isDark ? "from-gray-900/90" : "from-white/80"
-    } to-transparent`}
-/>
-
-
+      {/* Left Gradient Overlay */}
+      <div
+        className={`absolute left-0 top-0 h-full 
+          w-[80px] sm:w-[120px] md:w-[180px] lg:w-[350px] 
+          z-10 pointer-events-none 
+          bg-gradient-to-r ${isDark ? "from-gray-900/90" : "from-white/80"} to-transparent`}
+      />
+      <div
+        className={`absolute right-0 top-0 h-full 
+          w-[100px] sm:w-[140px] md:w-[200px] lg:w-[350px] 
+          z-10 pointer-events-none 
+          bg-gradient-to-l ${isDark ? "from-gray-900/90" : "from-white/80"} to-transparent`}
+      />
 
       {/* Scrollable Testimonials */}
       <div
@@ -88,24 +82,27 @@ export default function SmoothTestimonials({ theme }) {
         {[...testimonials, ...testimonials, ...testimonials].map((t, i) => (
           <div
             key={i}
-            className={`min-w-[280px] max-w-[320px] flex-shrink-0 p-5 rounded-xl shadow-md 
-              transition-transform duration-300 hover:scale-[1.02]
-              backdrop-blur-lg border 
+            className={`min-w-[280px] max-w-[320px] flex-shrink-0 p-6 rounded-xl shadow-md 
+              transition-transform duration-300 hover:scale-[1.03]
+              backdrop-blur-lg border text-center flex flex-col items-center
               ${isDark ? "bg-zinc-800/60 border-zinc-700 text-gray-200" : "bg-white/70 border-gray-200 text-gray-700"}`}
           >
-            <FaQuoteLeft className="text-orange-500 text-xl mb-3" />
-            <p className="text-sm leading-relaxed">{t.message}</p>
-            <div className="flex items-center gap-3 mt-5">
-              <img
-                src={t.image}
-                alt={t.name}
-                className="w-10 h-10 rounded-full object-cover border-2 border-orange-400"
-              />
-              <div>
+            <FaQuoteLeft className="text-orange-500 text-2xl mb-4" />
+            <p className="text-sm leading-relaxed mb-6">{t.message}</p>
+            <div className="flex flex-col items-center gap-3 mt-auto">
+              <div className="relative group">
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-12 h-12 rounded-full object-cover border-2 border-orange-400 shadow-lg transition-all duration-300 group-hover:shadow-orange-400/70"
+                />
+                <div className="absolute inset-0 rounded-full blur-md opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-300 bg-orange-400 z-[-1]" />
+              </div>
+              <div className="mt-2">
                 <p className={`font-semibold ${isDark ? "text-white" : "text-gray-800"}`}>
                   {t.name}
                 </p>
-                <p className={`text-xs ${isDark ? "text-gray-400" : "text-gray-500"}`}>
+                <p className={`text-xs mt-1 ${isDark ? "text-gray-400" : "text-gray-500"}`}>
                   {t.title}
                 </p>
               </div>

@@ -17,7 +17,7 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Loaders from "./components/loaders/Loaders";
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   // Load theme from localStorage or system preference
   useEffect(() => {
