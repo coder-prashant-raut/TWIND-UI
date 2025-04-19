@@ -17,3 +17,11 @@ html {
     transition: background-color 0.3s, color 0.3s;
   }
   
+/* Add in your global CSS */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

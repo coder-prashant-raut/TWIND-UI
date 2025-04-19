@@ -12,6 +12,9 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import TestimonialCarousel from "./TestimonialCarousel";
+import UILibraryBenefits from "./UILibraryBenefits";
+
 
 const Home = ({ theme }) => {
   const isDark = theme === "dark";
@@ -152,6 +155,13 @@ const Home = ({ theme }) => {
           </motion.div>
         ))}
       </motion.div>
+
+
+      <TestimonialCarousel theme = {theme}/>
+
+
+  <UILibraryBenefits theme={theme} />
+
     </section>
   );
 };
