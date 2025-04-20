@@ -64,7 +64,7 @@ function Footer({ theme }) {
 
           <div className="flex space-x-6 text-lg font-medium">
             <a href="/" className="hover:underline transition-all">Home</a>
-            <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
+            <a href="https://github.com/coder-prashant-raut/TWIND-UI/" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
               GitHub
             </a>
           </div>
