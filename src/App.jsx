@@ -3,18 +3,42 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  useLocation
 } from "react-router-dom";
 
-import NavBars from "./components/navbars/NavBars";
-import Footers from "./components/footers/Footers";
-import Cards from "./components/cards/Cards";
-import Buttons from "./components/buttons/Buttons";
+import NavBars from "./components/Components/navbars/NavBars";
+import Footers from "./components/Components/footers/Footers";
+import Cards from "./components/Components/cards/Cards";
+import Buttons from "./components/Components/buttons/Buttons";
 import Home from "./components/twindinner/Home";
-import Heros from "./components/heros/Heros";
+import Heros from "./components/Components/heros/Heros";
 import Navbar from "./components/twindinner/Navbar";
 import Footer from "./components/twindinner/Footer";
-import Testimonials from "./components/testimonials/Testimonials";
-import Loaders from "./components/loaders/Loaders";
+import Testimonials from "./components/Components/testimonials/Testimonials";
+import Loaders from "./components/Components/loaders/Loaders";
+import SideNav from "./components/SideNav/sideNav";
+import ButtonDocsPage from "./components/Components/docs/docs";
+
+// Layout component to conditionally show the sidebar
+const ContentWithSidebar = ({ children, theme }) => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  return (
+    <div className="flex">
+      {!isHomePage && (
+        <div className="hidden md:block">
+          <div className="sticky top-0 mt-15 h-screen">
+            <SideNav theme={theme} />
+          </div>
+        </div>
+      )}
+      <div className="w-full">
+        {children}
+      </div>
+    </div>
+  );
+};
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
@@ -45,22 +69,23 @@ const App = () => {
     <Router>
       <div className={`min-h-screen ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
-
-        <div className="">
+        
+        <ContentWithSidebar theme={theme}>
           <Routes>
             <Route path="/" element={<Home theme={theme} />} />
-            <Route path="/navbars" element={<NavBars theme={theme}/>} />
-            <Route path="/footers" element={<Footers theme={theme} />} />
-            <Route path="/cards" element={<Cards theme={theme} />} />
-            <Route path="/buttons" element={<Buttons theme={theme}/>} />
-            <Route path="/heros" element={<Heros theme={theme} />} />
-            <Route path="/testimonials" element={<Testimonials theme={theme} />} />
-            <Route path="/loaders" element={<Loaders theme={theme} />} />
+            <Route path="/components/navbars" element={<NavBars theme={theme} />} />
+            <Route path="/components/footers" element={<Footers theme={theme} />} />
+            <Route path="/components/cards" element={<Cards theme={theme} />} />
+            <Route path="/components/buttons" element={<Buttons theme={theme} />} />
+            <Route path="/components/heros" element={<Heros theme={theme} />} />
+            <Route path="/components/testimonials" element={<Testimonials theme={theme} />} />
+            <Route path="/components/loaders" element={<Loaders theme={theme} />} />
+
+
           </Routes>
-        </div>
-
+        </ContentWithSidebar>
+        
         <Footer theme={theme} />
-
       </div>
     </Router>
   );
