@@ -138,7 +138,7 @@ export default function GalaxyComponent({ theme }) {
               animate={{ opacity: [0.7, 1, 0.7] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: i * 0.1 }}
             >
-              <Link to={`/${name.toLowerCase()}`}>{name}</Link>
+              <Link to={`/components/${name.toLowerCase()}`}>{name}</Link>
             </motion.div>
           );
         })}
