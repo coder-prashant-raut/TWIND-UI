@@ -16,14 +16,14 @@ function Navbar({ theme, toggleTheme }) {
   }, []);
 
   const navLinks = [
-    { name: "Navbar", route: "/navbars" },
-    { name: "Buttons", route: "/buttons" },
-    { name: "Cards", route: "/cards" },
-    { name: "Footers", route: "/footers" },
-    { name: "Heros", route: "/heros" },
-    { name: "Forms", route: "/forms" },
-    { name: "Testimonials", route: "/testimonials" },
-    { name: "Loader", route: "/loaders" },
+    { name: "Buttons", route: "/components/buttons" },
+    { name: "Cards", route: "/components/cards" },
+    { name: "Navbar", route: "/components/navbars" },
+    { name: "Loader", route: "/components/loaders" },
+    { name: "Footer", route: "/components/footers" },
+    { name: "Hero Section", route: "/components/heros" },
+   
+    { name: "Testimonials", route: "/components//testimonials" },
   ];
 
   
