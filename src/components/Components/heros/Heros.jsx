@@ -71,9 +71,9 @@ function Heros({ theme }) {
     >
       {/* Header Section */}
       <div className="text-center">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold font-mono">
-          Modern Hero Sections Library
-        </h1>
+      <h1 className="text-3xl sm:text-4xl font-bold font-mono mb-4">
+            <span className={isDark ? "text-blue-400" : "text-blue-600"}>Modern Hero</span>  Components
+          </h1>
         <p className="text-sm sm:text-base lg:text-lg mt-2 max-w-2xl mx-auto">
           Below are different modern hero section designs that you can use in your React projects. Each hero component is
           responsive and engaging.
