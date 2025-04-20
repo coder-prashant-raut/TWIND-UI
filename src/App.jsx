@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation
+  useLocation,
 } from "react-router-dom";
 
 import NavBars from "./components/Components/navbars/NavBars";
@@ -17,8 +17,9 @@ import Footer from "./components/twindinner/Footer";
 import Testimonials from "./components/Components/testimonials/Testimonials";
 import Loaders from "./components/Components/loaders/Loaders";
 import SideNav from "./components/SideNav/sideNav";
-import Documentation from './components/Components/docs/docs'
-
+import Documentation from "./components/Components/docs/docs";
+import NotFound from "./components/NotFound/NotFound"; // 👈 Import the 404 page
+import Forms from "./components/Forms/Forms"
 
 // Layout component to conditionally show the sidebar
 const ContentWithSidebar = ({ children, theme }) => {
@@ -34,9 +35,7 @@ const ContentWithSidebar = ({ children, theme }) => {
           </div>
         </div>
       )}
-      <div className="w-full">
-        {children}
-      </div>
+      <div className="w-full">{children}</div>
     </div>
   );
 };
@@ -44,7 +43,6 @@ const ContentWithSidebar = ({ children, theme }) => {
 const App = () => {
   const [theme, setTheme] = useState("dark");
 
-  // Load theme from localStorage or system preference
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -55,7 +53,6 @@ const App = () => {
     }
   }, []);
 
-  // Apply theme to html root
   useEffect(() => {
     document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(theme);
@@ -70,7 +67,7 @@ const App = () => {
     <Router>
       <div className={`min-h-screen ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
-        
+
         <ContentWithSidebar theme={theme}>
           <Routes>
             <Route path="/" element={<Home theme={theme} />} />
@@ -81,12 +78,17 @@ const App = () => {
             <Route path="/components/heros" element={<Heros theme={theme} />} />
             <Route path="/components/testimonials" element={<Testimonials theme={theme} />} />
             <Route path="/components/loaders" element={<Loaders theme={theme} />} />
-<Route path = "/docs" element = {<Documentation theme = {theme} />}/>
-
+            <Route path="/components/forms" element={<Forms theme={theme} />} />
+            
+            <Route path="/docs" element={<Documentation theme={theme} />} />
+            
+            {/* 👇 404 Catch-all route must be last */}
+            <Route path="*" element={<NotFound theme={theme} />} />
           </Routes>
         </ContentWithSidebar>
-        
+
         <Footer theme={theme} />
+        
       </div>
     </Router>
   );
