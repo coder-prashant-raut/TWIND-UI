@@ -66,7 +66,7 @@ const Documentation = ({ theme }) => {
                     <FaCheck className="text-white text-sm" />
                   </div>
                   <div>
-                    <h4 className="font-bold mb-1">40+ Components</h4>
+                    <h4 className="font-bold mb-1">10 + Components</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">A comprehensive library of customizable UI components</p>
                   </div>
                 </div>
