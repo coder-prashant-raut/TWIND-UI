@@ -2,7 +2,7 @@
 export const navItems = [
     {
       title: "Getting Started",
-      items: [{ name: "Quick Start", href: "/quick-start" }],
+      items: [{ name: "Quick Start", href: "/docs" }],
     },
     {
       title: "Components",

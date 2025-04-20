@@ -17,7 +17,8 @@ import Footer from "./components/twindinner/Footer";
 import Testimonials from "./components/Components/testimonials/Testimonials";
 import Loaders from "./components/Components/loaders/Loaders";
 import SideNav from "./components/SideNav/sideNav";
-import ButtonDocsPage from "./components/Components/docs/docs";
+import Documentation from './components/Components/docs/docs'
+
 
 // Layout component to conditionally show the sidebar
 const ContentWithSidebar = ({ children, theme }) => {
@@ -80,7 +81,7 @@ const App = () => {
             <Route path="/components/heros" element={<Heros theme={theme} />} />
             <Route path="/components/testimonials" element={<Testimonials theme={theme} />} />
             <Route path="/components/loaders" element={<Loaders theme={theme} />} />
-
+<Route path = "/docs" element = {<Documentation theme = {theme} />}/>
 
           </Routes>
         </ContentWithSidebar>

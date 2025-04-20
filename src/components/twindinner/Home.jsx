@@ -101,13 +101,13 @@ const Home = ({ theme }) => {
     : " text-gray-900"
 }`}
 >
-          TWIND-UI is your gateway to stunning, efficient, and production-ready
+          BRAHMA-UI is your gateway to stunning, efficient, and production-ready
           components. Build elegant interfaces faster than ever.
         </p>
      
 
         <div className="flex justify-center mt-6">
-  <Link to="/documentation">
+  <Link to="/docs">
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}

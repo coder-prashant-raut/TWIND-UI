@@ -23,7 +23,7 @@ function Navbar({ theme, toggleTheme }) {
     { name: "Footer", route: "/components/footers" },
     { name: "Hero Section", route: "/components/heros" },
    
-    { name: "Testimonials", route: "/components//testimonials" },
+    { name: "Testimonials", route: "/components/testimonials" },
   ];
 
   
