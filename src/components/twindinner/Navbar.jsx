@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaMoon, FaSun, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
@@ -26,34 +26,36 @@ function Navbar({ theme, toggleTheme }) {
     { name: "Testimonials", route: "/components/testimonials" },
   ];
 
-  
-  
   return (
-    <nav    style={{ fontFamily: "'Inter', sans-serif" }}
-    className={`fixed  top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out backdrop-blur-md ${
-      scrolled
-        ? theme === "dark"
-          ? "bg-black/80 text-white shadow-md border-b border-white/10 mt-4 mx-4 md:mx-40 rounded-xl"
-          : "bg-white/80 text-black shadow-md border-b border-gray-200 mt-4 mx-4 md:mx-40 rounded-xl"
-        : theme === "dark"
-        ? " text-white border-transparent"
-        : " text-black border-transparent"
-    }`}
-    
+    <nav
+      style={{ fontFamily: "'Inter', sans-serif" }}
+      className={`fixed  top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out backdrop-blur-md ${
+        scrolled
+          ? theme === "dark"
+            ? "bg-black/80 text-white shadow-md border-b border-white/10 mt-4 mx-4 md:mx-40 rounded-xl"
+            : "bg-white/80 text-black shadow-md border-b border-gray-200 mt-4 mx-4 md:mx-40 rounded-xl"
+          : theme === "dark"
+          ? " text-white border-transparent"
+          : " text-black border-transparent"
+      }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
-       
-<Link to="/">
-  <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider cursor-pointer">
-    <span className={` ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-      Brahma
-    </span>
-    <span className="ml-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-md dark:text-transparent">
-      UI
-    </span>
-  </h1>
-</Link>
+
+        <Link to="/">
+          <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider cursor-pointer">
+            <span
+              className={` ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Brahma
+            </span>
+            <span className="ml-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-md dark:text-transparent">
+              UI
+            </span>
+          </h1>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
@@ -63,12 +65,14 @@ function Navbar({ theme, toggleTheme }) {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white font-mono"  >
+            <button className="flex items-center gap-2 px-3 py-2 text-base font-medium rounded-md transition hover:bg-blue-600 hover:text-white font-mono">
               Components <FaChevronDown />
             </button>
             <div
               className={`${
-                isDropdownOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
+                isDropdownOpen
+                  ? "max-h-[300px] opacity-100"
+                  : "max-h-0 opacity-0"
               } absolute left-0 w-48 bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg rounded-md mt-2 transition-all duration-300 overflow-hidden font-mono`}
             >
               <ul>
@@ -97,7 +101,9 @@ function Navbar({ theme, toggleTheme }) {
             </button>
             <div
               className={`${
-                isTemplatesDropdownOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
+                isTemplatesDropdownOpen
+                  ? "max-h-[300px] opacity-100"
+                  : "max-h-0 opacity-0"
               } absolute left-0 w-48 bg-white dark:bg-gray-800 text-black dark:text-white shadow-lg rounded-md mt-2 transition-all duration-300 overflow-hidden font-mono`}
             >
               <ul>
@@ -142,7 +148,8 @@ function Navbar({ theme, toggleTheme }) {
           {/* Components Dropdown */}
           <details className="group">
             <summary className="flex justify-between items-center cursor-pointer px-2 py-2 rounded hover:bg-blue-100 dark:hover:bg-gray-700">
-              Components <FaChevronDown className="group-open:rotate-180 transition" />
+              Components{" "}
+              <FaChevronDown className="group-open:rotate-180 transition" />
             </summary>
             <ul className="pl-4 mt-1 space-y-1">
               {navLinks.map(({ name, route }) => (
@@ -162,7 +169,8 @@ function Navbar({ theme, toggleTheme }) {
           {/* Templates Dropdown */}
           <details className="group">
             <summary className="flex justify-between items-center cursor-pointer px-2 py-2 rounded hover:bg-blue-100 dark:hover:bg-gray-700">
-              Templates <FaChevronDown className="group-open:rotate-180 transition" />
+              Templates{" "}
+              <FaChevronDown className="group-open:rotate-180 transition" />
             </summary>
             <ul className="pl-4 mt-1 space-y-1">
               {["Template 1", "Template 2", "Template 3"].map((name, idx) => (
@@ -178,6 +186,16 @@ function Navbar({ theme, toggleTheme }) {
               ))}
             </ul>
           </details>
+
+          <div className="group">
+           
+                  <Link to="/docs">
+                    
+                      Explore Docs
+                  
+                  </Link>
+             
+          </div>
         </div>
       )}
     </nav>
