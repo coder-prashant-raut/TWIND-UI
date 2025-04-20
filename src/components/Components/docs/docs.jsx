@@ -115,10 +115,10 @@ const Documentation = ({ theme }) => {
               </button>
               
               <button 
-                onClick={() => setActiveTab("components")}
+                onClick={() => setActiveTab("basic-usage")}
                 className="flex items-center gap-2 px-6 py-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg transition-colors"
               >
-                Browse Components <FaArrowRight />
+               Basic Usages <FaArrowRight />
               </button>
             </div>
           </div>
@@ -390,7 +390,7 @@ export default App;`}
         </motion.div>
         
         {/* Quick navigation footer */}
-        <div className="mt-8 flex justify-between items-center">
+        {/* <div className="mt-8 flex justify-between items-center">
           <button 
             onClick={() => {
               const currentIndex = menuItems.findIndex(item => item.id === activeTab);
@@ -432,7 +432,7 @@ export default App;`}
                 : ""
             } →
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -160,7 +160,7 @@ function Buttons({ theme }) {
               description={button.description}
               component={button.component}
               code={button.code}
-              props={button.props}
+             
               theme={theme}
             />
           ))}
