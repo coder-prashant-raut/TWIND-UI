@@ -12,42 +12,57 @@ import {card3Code} from './Card3';
 import {card4Code} from './Card4';
 import {card5Code} from './Card5';
 import {card6Code} from './Card6';
+import Card8, { Card8Code } from './Card8';
+import Card9, { card9Code } from './Card9';
+import Card7, { card7Code } from './Card7';
 
 function Cards({ theme }) {
   const isDark = theme === "dark";
   const cards =
   [
     {
-      name: "Card1",
+      name: "Card 1",
       component: <Card1 />,
       code: card1Code
     },
     {
-      name: "Card2",
+      name: "Card 2",
       component: <Card2 />,
       code: card2Code
     },
     {
-      name: "Card3",
+      name: "Card 3",
       component: <Card3 />,
       code: card3Code
     },
     {
-      name: "Card4",
+      name: "Card 4",
       component: <Card4 />,
       code: card4Code
     },
     {
-      name: "Card5",
+      name: "Card 5",
       component: <Card5 />,
       code: card5Code
     },
     {
-      name: "Card6",
+      name: "Card 6",
       component: <Card6 />,
-      code: card5Code
+      code: card6Code
     },
-    
+    {
+      name: "Card 7",
+      component: <Card7 />,
+      code: card7Code
+    }, {
+      name: "Card 8",
+      component: <Card8 />,
+      code: Card8Code
+    }, {
+      name: "Card 9",
+      component: <Card9 />,
+      code: card9Code
+    },
 
   ]
 
