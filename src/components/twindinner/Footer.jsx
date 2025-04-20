@@ -13,14 +13,14 @@ const team = [
   },
   {
     name: "Alok Tamrakar",
-    image: "https://avatars.githubusercontent.com/u/136845497?s=400&u=eb8b1eedfb45765d5eb11cfe401637dd6d6de77f&v=4",
+    image: "https://avatars.githubusercontent.com/u/109581769?s=40&v=4",
     github: "https://github.com/TammyAlok2",
     linkedin: "https://www.linkedin.com/in/alok-tamrakar-89a71a199/",
     twitter: "https://x.com/AlokTamrak12342",
   },
   {
     name: "Sumit Raskar",
-    image: "https://avatars.githubusercontent.com/u/109581769?s=40&v=4",
+    image: "https://avatars.githubusercontent.com/u/136845497?s=400&u=eb8b1eedfb45765d5eb11cfe401637dd6d6de77f&v=4",
     github: "https://github.com/SumitRaskar01",
     linkedin: "https://www.linkedin.com/in/sumit-raskar-5b6b92261/",
     twitter: "https://x.com/SumitRaska62485",
