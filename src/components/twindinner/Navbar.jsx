@@ -22,7 +22,7 @@ function Navbar({ theme, toggleTheme }) {
     { name: "Loader", route: "/components/loaders" },
     { name: "Footer", route: "/components/footers" },
     { name: "Hero Section", route: "/components/heros" },
-   
+    { name: "Forms", route: "/components/forms" },
     { name: "Testimonials", route: "/components/testimonials" },
   ];
 

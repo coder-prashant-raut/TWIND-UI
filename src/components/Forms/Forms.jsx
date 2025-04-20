@@ -4,7 +4,7 @@ import Form2, { form2Code } from './Form2';
 import Form3, { form3Code } from './Form3';
 import Form4, { form4Code } from './Form4';
 import Form5, { form5Code } from './Form5';
-import PreviewCode from '../../Common/PreviewCode';
+import PreviewCode from '../../components/Common/PreviewCode'
 
 function Forms({ theme }) {
   const isDark = theme === "dark";

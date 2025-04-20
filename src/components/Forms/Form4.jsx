@@ -228,7 +228,7 @@ export const form4Code = `
     <button
       type="button"
       className="bg-gray-500 text-white py-2 px-6 rounded-lg hover:bg-gray-600 transition-all"
-      ${step === 1 ? "hidden" : ""}
+      /* addDollerSingHere{step === 1 ? "hidden" : ""} */
     >
       Previous
     </button>
@@ -242,5 +242,6 @@ export const form4Code = `
   </div>
 </form>
 `;
+
 
 

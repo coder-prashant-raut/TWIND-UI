@@ -19,6 +19,7 @@ import Loaders from "./components/Components/loaders/Loaders";
 import SideNav from "./components/SideNav/sideNav";
 import Documentation from "./components/Components/docs/docs";
 import NotFound from "./components/NotFound/NotFound"; // 👈 Import the 404 page
+import Forms from "./components/Forms/Forms"
 
 // Layout component to conditionally show the sidebar
 const ContentWithSidebar = ({ children, theme }) => {
@@ -77,6 +78,8 @@ const App = () => {
             <Route path="/components/heros" element={<Heros theme={theme} />} />
             <Route path="/components/testimonials" element={<Testimonials theme={theme} />} />
             <Route path="/components/loaders" element={<Loaders theme={theme} />} />
+            <Route path="/components/forms" element={<Forms theme={theme} />} />
+            
             <Route path="/docs" element={<Documentation theme={theme} />} />
             
             {/* 👇 404 Catch-all route must be last */}
@@ -85,6 +88,7 @@ const App = () => {
         </ContentWithSidebar>
 
         <Footer theme={theme} />
+        
       </div>
     </Router>
   );
