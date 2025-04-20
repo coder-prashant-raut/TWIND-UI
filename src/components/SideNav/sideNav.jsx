@@ -1,7 +1,7 @@
 // components/SideNav.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { navItems } from "../../data/SideNav";
+import { navItems } from "../../data/sideNav";
 
 const SideNav = ({ theme }) => {
   return (
