@@ -91,8 +91,9 @@ const Home = ({ theme }) => {
         <div className="flex flex-col gap-2 justify-center items-center">
           
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 font-mono "  >
-          Elevate Your UI Game <img src={RocketLogo} alt=""  className="max-h-[500px]"/>
+        Elevate Your UI Game
         </h1>
+         <img src={RocketLogo} alt=""  className="max-h-[500px]"/>
 
 
         <p   className={`p-6 text-2xl font-mono ${
