@@ -2,7 +2,7 @@ import React from "react";
 
 const Card8 = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-r from-green-100 via-blue-100 to-purple-100">
+    <div className="flex items-center justify-center min-h-screen px-4 ">
       <div className="max-w-2xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row transform transition duration-500 hover:scale-105 hover:shadow-xl">
         
         {/* Image Section */}

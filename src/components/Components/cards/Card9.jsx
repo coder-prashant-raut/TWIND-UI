@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card9 = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-50 via-purple-100 to-pink-50 flex items-center justify-center min-h-screen py-8">
+    <div className="bg-transparent flex items-center justify-center min-h-screen py-8">
       <div className="flex gap-6 flex-wrap justify-center px-4">
         {/* Card 1 */}
         <div className="max-w-sm w-full sm:w-auto bg-white rounded-3xl shadow-2xl border border-gray-200 p-6 transform transition hover:scale-105 hover:shadow-xl">
